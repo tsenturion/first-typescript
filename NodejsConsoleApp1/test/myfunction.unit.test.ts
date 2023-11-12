@@ -1,18 +1,22 @@
-﻿import multiply from '../myfunction';
+﻿import repeat from '../myfunction';
 import { suite, test } from '@testdeck/mocha';
 import * as _chai from 'chai';
 import { expect } from 'chai';
 
-describe('multiply function', () => {
-    it('multiplies two positive numbers', () => {
-        expect(multiply(2, 3)).to.equal(6);
+
+describe('Calculator Tests', () => {
+    it('a', () => {
+        const result = repeat('a', 3);
+        expect(result).to.equal('aaa');
     });
 
-    it('multiplies a positive and a negative number', () => {
-        expect(multiply(2, -3)).to.equal(-6);
+    it('b', () => {
+        const result = repeat('b', 0);
+        expect(result).to.equal('');
     });
 
-    it('multiplies two negative numbers', () => {
-        expect(multiply(-2, -3)).to.equal(6);
+    it('c', () => {
+        const result = repeat('c', 1);
+        expect(result).to.equal('c');
     });
 });
