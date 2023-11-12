@@ -1,9 +1,11 @@
-﻿function getHiddenCard(number: string, count?: number): string {
-    if (typeof count == 'number')
-        return '*'.repeat(count) + number.substring(12);
-    else
-        return '*'.repeat(4) + number.substring(12);
+﻿
+
+function getEvenNumbers(arr: number[]): number[] {
+    let arrr: number[] = [];
+    for (let i = 0; i < arr.length; i++)
+        if (arr[i] % 2 == 0)
+            arrr.push(arr[i]);
+    return arrr;
 }
 
-
-export default getHiddenCard;
+export default getEvenNumbers;
