@@ -8,13 +8,22 @@
   },
   "scripts": {
     "build": "tsc --build",
-    "clean": "tsc --build --clean"
+    "clean": "tsc --build --clean",
+    "test": "nyc ./node_modules/.bin/_mocha 'test/**/*.test.ts'"
   },
   "devDependencies": {
+    "@testdeck/mocha": "^0.3.3",
+    "@types/chai": "^4.3.10",
+    "@types/mocha": "^10.0.4",
     "@types/node": "^14.14.7",
     "@typescript-eslint/eslint-plugin": "^5.33.0",
     "@typescript-eslint/parser": "^5.33.0",
+    "chai": "^4.3.10",
     "eslint": "^8.21.0",
+    "mocha": "^10.2.0",
+    "mocha-typescript": "^1.1.17",
+    "nyc": "^15.1.0",
+    "ts-node": "^10.9.1",
     "typescript": "^5.2.2"
   },
   "eslintConfig": {
