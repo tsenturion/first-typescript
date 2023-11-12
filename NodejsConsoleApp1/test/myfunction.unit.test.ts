@@ -1,29 +1,22 @@
-﻿import getHiddenCard from '../myfunction';
+﻿import filterAnagrams from '../myfunction';
 import { suite, test } from '@testdeck/mocha';
 import * as _chai from 'chai';
 import { expect } from 'chai';
 
 
-describe('Calculator Tests', () => {
+describe('tests', () => {
     it('a', () => {
-        const result = getHiddenCard('1234567812345678', 2);
-        expect(result).to.equal('**5678');
+        const result = filterAnagrams('abba', ['aabb', 'abcd', 'bbaa', 'dada']);
+        expect(result).to.deep.equal([ 'aabb', 'bbaa' ]);
     });
 
     it('b', () => {
-        const result = getHiddenCard('1234567812345678', 3);
-        expect(result).to.equal('***5678');
+        const result = filterAnagrams('racer', ['crazer', 'carer', 'racar', 'caers', 'racer']);
+        expect(result).to.deep.equal([ 'carer', 'racer' ]);
     });
 
     it('c', () => {
-        const result = getHiddenCard('1234567812345678');
-        expect(result).to.equal('****5678');
+        const result = filterAnagrams('laser', ['lazing', 'lazy', 'lacer']);
+        expect(result).to.deep.equal([]);
     });
-
-    it('e', () => {
-        const result = getHiddenCard('2034399002121100', 1);
-        expect(result).to.equal('*1100');
-    }
-    
-    )
 });
