@@ -1,4 +1,13 @@
-﻿const isComplete = (course: { name: string, lessons: string[], }): boolean => course.lessons.length > 3;
+﻿const buildModal = (text: string, status: ModalStatus): { text: string, status: ModalStatus } => {
+    return {
+        text: text,
+        status: status,
+    };
+};
+enum ModalStatus {
+    Opened = '1',
+    Closed = '2',
+};
 
-
-export default isComplete;
+export { ModalStatus };
+export default buildModal;
