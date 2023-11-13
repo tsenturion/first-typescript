@@ -1,3 +1,8 @@
-import filterAnagrams from './myfunction';
+import isComplete from './myfunction';
+const course = {
+    name: 'Java',
+    lessons: ['variables', 'functions', 'conditions'],
+};
 
-console.log(filterAnagrams('abba', ['aabb', 'abcd', 'bbaa', 'dada']));
+
+console.log(isComplete(course));
