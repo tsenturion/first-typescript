@@ -1,15 +1,6 @@
-﻿const getOlderUser = (user1: User, user2: User): User | null => {
-    if (user1.age > user2.age)
-        return user1;
-    else if (user1.age < user2.age)
-        return user2;
-    return null;
+﻿function getParams(sentence: string): Record<string, string> {
+    return sentence.split('&').reduce((acc, part) => (acc[part.split('=')[0]] = part.split('=')[1], acc), {} as Record<string, string>);
 }
 
 
-type User = {
-    name: string,
-    age: number,
-};
-export type { User };
-export default getOlderUser;
+export default getParams;
