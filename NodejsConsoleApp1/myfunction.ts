@@ -1,13 +1,15 @@
-﻿const buildModal = (text: string, status: ModalStatus): { text: string, status: ModalStatus } => {
-    return {
-        text: text,
-        status: status,
-    };
-};
-enum ModalStatus {
-    Opened = '1',
-    Closed = '2',
-};
+﻿const getOlderUser = (user1: User, user2: User): User | null => {
+    if (user1.age > user2.age)
+        return user1;
+    else if (user1.age < user2.age)
+        return user2;
+    return null;
+}
 
-export { ModalStatus };
-export default buildModal;
+
+type User = {
+    name: string,
+    age: number,
+};
+export type { User };
+export default getOlderUser;
